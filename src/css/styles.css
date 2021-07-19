@@ -1,0 +1,88 @@
+ :root{
+    --color-primary: #440A67;
+    --color-secondary: #93329E;
+    --color-light:#B4AEE8;
+    --color-Lighten:#FFE3FE;
+} 
+
+/* :root{
+    --color-primary: #08D9D6;
+    --color-secondary: #252A34;
+    --color-light:#FF2E63;
+    --color-Lighten:#EAEAEA;
+} */
+
+body{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.container{
+    background: linear-gradient(to bottom, var(--color-light), var(--color-Lighten));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.square{
+    border-radius: 13px;
+    border-width: 0px;
+    height: 250px;
+    width: 250px;
+    background-color: #440A67;
+    box-shadow: 5px 5px 20px black;
+}
+
+.back-2{
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+    animation: move1 10s linear 2s infinite alternate;
+    margin-left: 50px;
+}
+.back-1{
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+    animation: move1 20s linear 3s infinite alternate;
+    margin-right: 50px;
+}
+
+.clock{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    top: 0px;
+    height: 100vh;
+    
+}
+.clock-item{
+    background-color: #ffe3fe61;
+    height: 300px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 5px 5px 20px #a7a3a3;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-item h2{
+    font-size: 8rem;
+    color: #0056aa;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@keyframes move1 {
+    0%   {margin-top: 0px;}
+    25%  {margin-top: -350px;}
+    50%  {margin-top: 0px;}
+    75%  {margin-top: 350px;}
+    100% {margin-top: 0px;}
+  }
